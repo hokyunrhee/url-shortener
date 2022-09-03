@@ -12,4 +12,15 @@ export const functions: AWS["functions"] = {
       },
     ],
   },
+  getUrl: {
+    handler: "src/functions/get-url.handler",
+    events: [
+      {
+        httpApi: {
+          path: "/{id}",
+          method: "get",
+        },
+      },
+    ],
+  },
 };
